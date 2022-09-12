@@ -43,7 +43,7 @@ threex.on("gpserror", code => {
 });
 
 // Uncomment to use a fake GPS location
-fake = { lat: 41.278574, lon : 69.195428 };
+fake = { lat: 56.140025, lon : 47.219181 };
 if(fake) {
     threex.fakeGps(fake.lon, fake.lat);
 } else {
