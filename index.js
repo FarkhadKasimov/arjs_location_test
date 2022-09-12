@@ -1,5 +1,3 @@
-//import { GLTFLoader } from 'GLTFLoader.js';
-
 function isMobile() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // true for mobile device
@@ -21,8 +19,6 @@ const threex = new THREEx.LocationBased(scene, camera);
 const cam = new THREEx.WebcamRenderer(renderer, '#video1');
 
 const oneDegAsRad = THREE.Math.degToRad(1);
-
-//var loader = new GLTFLoader();
 
 
 let orientationControls;
@@ -118,11 +114,4 @@ function setupObjects(longitude, latitude) {
     threex.add(new THREE.Mesh(geom, material3), longitude - 0.001, latitude); // slightly west
     threex.add(new THREE.Mesh(geom, material4), longitude + 0.001, latitude); // slightly east
     threex.add(new THREE.Mesh(geom, material4), '69.195395', '41.278590'); // slightly east
-    // threex.add(loader.load( 'mask2.glb', function ( gltf )
-    // {
-    //     sword = gltf.scene;  // sword 3D object is loaded
-    //     sword.scale.set(2, 2, 2);
-    //     sword.position.y = 4;
-    //     scene.add(sword);
-    // } ),longitude, latitude + 0.001);
 }
